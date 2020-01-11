@@ -15,6 +15,7 @@
         android:src="@drawable/google"
         android:padding="70dp"
         android:layout_gravity="center_horizontal"/>
+
     <Button
         android:id="@+id/searchBT"
         android:layout_width="wrap_content"
@@ -22,7 +23,7 @@
         android:text="Search for jobs"
         android:padding="15dp"
         android:layout_gravity="center_horizontal"
-        android:background="@color/gray"/>
+        android:background="@color/dull_blue"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -40,7 +41,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/mail_icon"
-            android:tint="@color/classy_purple"
+            android:tint="@color/dull_blue"
             android:layout_marginTop="15dp"
             android:padding="5dp"/>
         <EditText
@@ -66,7 +67,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/password"
-            android:tint="@color/classy_purple"
+            android:tint="@color/dull_blue"
             android:layout_marginTop="15dp"
             android:padding="5dp"/>
         <EditText
@@ -111,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/otherloginLL">
         <ImageView
