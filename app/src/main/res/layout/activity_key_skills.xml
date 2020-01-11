@@ -4,95 +4,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/base1"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".KeySkillsActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
-            android:paddingLeft="60dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:text="KEY SKILLS"
-            android:textColor="@color/black"
-            android:textSize="35dp" />
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/thin_block"
         android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp"
-        android:paddingTop="70dp"
-        >
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="KEY SKILLS"
+        android:textColor="@color/black"
+        android:textSize="35dp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your work preference"
-            android:textSize="20dp"/>
-    </LinearLayout>
-    <LinearLayout
+
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp"
-        >
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:hint="Enter your work preference"
+        android:textSize="20dp" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your preferred location"
-            android:textSize="20dp"/>
-    </LinearLayout>
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp"
-        >
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:hint="Enter your preferred location"
+        android:textSize="20dp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your designation"
-            android:textSize="20dp"/>
-    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
 
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:hint="Enter your designation"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:hint="Enter your expected salary"
+        android:textSize="20dp" />
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
+
+    <Button
+        android:layout_marginTop="50dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp"
-        >
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="@font/arima"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/button_pink"
+        android:text="UPLOAD RESUME" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your expected salary"
-            android:textSize="20dp"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingLeft="50dp"
-            android:paddingBottom="50dp"
-            android:paddingRight="30dp">
-
-        <Button
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:text="UPLOAD RESUME" />
-
-    </LinearLayout>
 </LinearLayout>
