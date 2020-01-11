@@ -5,19 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profile_activity">
+    tools:context=".KeySkillsActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:paddingLeft="60dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:text="PROFILE"
-        android:textColor="@color/black"
-        android:textSize="35dp" />
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="60dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="KEY SKILLS"
+            android:textColor="@color/black"
+            android:textSize="35dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +30,37 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your name"
+            android:hint="Enter your work preference"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingBottom="30dp"
+        android:paddingRight="15dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your preferred location"
+            android:textSize="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingBottom="30dp"
+        android:paddingRight="15dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your designation"
             android:textSize="20dp"/>
     </LinearLayout>
 
@@ -41,77 +70,29 @@
         android:orientation="horizontal"
         android:paddingLeft="30dp"
         android:paddingBottom="30dp"
-        android:paddingRight="15dp">
+        android:paddingRight="15dp"
+        >
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your mobile no"
+            android:hint="Enter your expected salary"
             android:textSize="20dp"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp">
 
-        <EditText
+    <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your location"
-            android:textSize="20dp"/>
-    </LinearLayout>
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingBottom="50dp"
+            android:paddingRight="30dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="15dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your mail id"
-            android:textSize="20dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="30dp"
-        android:paddingBottom="70dp"
-        android:paddingRight="15dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your password"
-            android:inputType="textPassword"
-            android:textSize="20dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="250dp"
-        android:paddingBottom="30dp"
-        android:paddingRight="30dp">
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="NEXT"/>
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:text="UPLOAD RESUME" />
 
     </LinearLayout>
-
-
-
-
 </LinearLayout>

@@ -4,136 +4,188 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/base1"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
         android:id="@+id/applogoIV"
-        android:src="@drawable/google"
-        android:padding="70dp"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        app:srcCompat="@drawable/graduation" />
 
-    <Button
-        android:id="@+id/searchBT"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="30dp"
+            app:srcCompat="@drawable/job_search"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/thin_block"
+            android:text="SEARCH JOBS ..."
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search for jobs"
-        android:padding="15dp"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/dull_blue"/>
+        android:layout_marginLeft="30dp"
+        android:fontFamily="@font/crimson"
+        android:text="Search for your dream Jobs in our dearmland"
+        android:textColor="@color/gray"
+        android:textSize="13dp" />
+
     <View
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="@color/shiny_blue"
-        android:layout_marginTop="20dp"/>
-    <LinearLayout
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/dirtyyellow" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cuteblue" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="160dp"
+        android:background="@color/kandravipink" />
+
+    <EditText
+        android:id="@+id/emaiET"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="40dp"
-        android:id="@+id/emailLL">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/mail_icon"
-            android:tint="@color/black"
-            android:layout_marginTop="15dp"
-            android:padding="5dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_blue"
-            android:hint="Enter your email"
-            android:inputType="textEmailAddress"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="20dp"
-            android:id="@+id/emaiET"
-            />
-    </LinearLayout>
-    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/gray" />
+
+    <EditText
+        android:id="@+id/passwordET"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="40dp"
-        android:id="@+id/passwordLL">
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/password"
-            android:tint="@color/black"
-            android:layout_marginTop="15dp"
-            android:padding="5dp"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_blue"
-            android:hint="Enter ur password"
-            android:layout_marginTop="8dp"
-            android:paddingLeft="20dp"
-            android:inputType="textPassword"
-            android:id="@+id/passwordET"
-            />
-    </LinearLayout>
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:paddingLeft="40dp" />
+
     <LinearLayout
+        android:id="@+id/buttonsLL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="25dp"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/buttonsLL">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/loginBT"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="Login"
-            android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_blue"
-            android:backgroundTint="@color/shiny_blue"/>
+            android:background="@drawable/button_pink"
+            android:text="Login"
+            android:textColor="@color/white" />
+
         <Button
             android:id="@+id/signupBT"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:text="SignUp"
-            android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
-            android:background="@drawable/button_blue"
             android:layout_marginLeft="30dp"
-            android:backgroundTint="@color/shiny_blue"/>
+            android:background="@drawable/button_pink"
+            android:text="SignUp"
+            android:textColor="@color/white" />
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/otherloginLL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="35dp"
         android:layout_gravity="center_horizontal"
-        android:id="@+id/otherloginLL">
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/google"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            app:srcCompat="@drawable/google" />
+
         <TextView
             android:layout_width="40dp"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:hint="Or"
             android:layout_gravity="center_vertical"
-            />
+            android:fontFamily="@font/disney"
+            android:hint="Or"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/facebook"
-            android:padding="5dp"/>
+            android:padding="5dp"
+            app:srcCompat="@drawable/facebook" />
     </LinearLayout>
 
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="120dp"
+        android:background="@color/dirtyyellow" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cuteblue" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="160dp"
+        android:background="@color/kandravipink" />
 
 
 </LinearLayout>

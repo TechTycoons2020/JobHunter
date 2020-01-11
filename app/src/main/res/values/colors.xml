@@ -9,8 +9,13 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="classy_purple">#d767f6</color>
-    <color name="cute_blue">#2ddae3</color>
     <color name="hot_orange">#f56a30</color>
     <color name="good_green">#00dd7c</color>
-    <color name="gray">#57B6B6B6</color>
+    <color name="gray">#8D8D8D</color>
+
+    <color name="dirtyyellow">#ffce23</color>
+    <color name="cuteblue">#54afff</color>
+    <color name="kandravipink">#fd4757</color>
+
+
 </resources>
