@@ -2,6 +2,7 @@ package com.example.jobhunter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
     EditText email , password;
+    Button loginBT , signupBT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +28,13 @@ public class LoginActivity extends AppCompatActivity {
 
         //Intialization of UI
         initUI();
-        email.setOnClickListener(new View.OnClickListener() {
+
+        //sign up button onclick listener
+        signupBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               //complete ur actions
-            }
-        });
-        password.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //complete ur actions
+                Intent intent = new Intent(getApplicationContext(),profile_activity.class);
+                startActivity(intent);
             }
         });
 
@@ -44,5 +43,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initUI() {
         email = findViewById(R.id.emaiET);
         password = findViewById(R.id.passwordET);
+        loginBT = findViewById(R.id.loginBT);
+        signupBT = findViewById(R.id.signupBT);
     }
 }
