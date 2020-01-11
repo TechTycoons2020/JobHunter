@@ -41,14 +41,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/mail_icon"
-            android:tint="@color/dull_blue"
+            android:tint="@color/black"
             android:layout_marginTop="15dp"
             android:padding="5dp"/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_blue"
-            android:hint="Enter ur email"
+            android:hint="Enter your email"
             android:inputType="textEmailAddress"
             android:layout_marginTop="8dp"
             android:paddingLeft="20dp"
@@ -67,7 +67,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/password"
-            android:tint="@color/dull_blue"
+            android:tint="@color/black"
             android:layout_marginTop="15dp"
             android:padding="5dp"/>
         <EditText
