@@ -39,5 +39,5 @@
         android:layout_marginLeft="240dp"
         android:layout_marginTop="100dp"
         android:autofillHints="enter your quafs"
-        />
+        />*
 </RelativeLayout>
