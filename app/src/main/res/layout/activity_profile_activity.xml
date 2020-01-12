@@ -27,10 +27,11 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="40dp"
         android:hint="Enter your name"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
         android:textSize="20dp" />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
@@ -46,10 +47,11 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="40dp"
         android:hint="Enter your mobile no"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
         android:textSize="20dp" />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
@@ -65,29 +67,11 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
-        android:inputType="textEmailAddress"
-        android:paddingLeft="40dp"
         android:hint="Enter your location"
-        android:textSize="20dp" />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/dirtyyellow" />
-
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/button_blue"
-        android:fontFamily="@font/crimson"
         android:inputType="textEmailAddress"
         android:paddingLeft="40dp"
-        android:hint="Enter your mail id"
         android:textSize="20dp" />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
@@ -103,10 +87,31 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
+        android:hint="Enter your mail id"
+        android:inputType="textEmailAddress"
         android:paddingLeft="40dp"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
         android:hint="Enter your password"
         android:inputType="textPassword"
+        android:paddingLeft="40dp"
         android:textSize="20dp" />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
@@ -115,17 +120,29 @@
         android:layout_marginRight="30dp"
         android:background="@color/dirtyyellow" />
 
-    <Button
-        android:layout_marginTop="50dp"
-        android:layout_width="130dp"
-        android:layout_height="wrap_content"
-        android:text="NEXT"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:fontFamily="@font/arima"
-        android:textStyle="bold"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/button_pink"/>
 
-   
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="35dp"
+        android:paddingTop="40dp"
+        android:paddingStart="30dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="55dp"
+            android:text="Student"
+            android:textSize="20dp" />
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Working"
+            android:textSize="20dp" />
+
+    </RadioGroup>
 </LinearLayout>
+
