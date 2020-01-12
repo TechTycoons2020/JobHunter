@@ -67,10 +67,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LL2"
+        android:id="@+id/LL3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL1"
+        android:layout_below="@id/LL2"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
 
@@ -84,7 +84,7 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spinner3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -92,10 +92,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/LL3"
+        android:id="@+id/LL4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL2"
+        android:layout_below="@id/LL3"
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
@@ -107,7 +107,7 @@
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/spinner4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
@@ -116,8 +116,8 @@
 
 
     <EditText
-        android:layout_below="@id/LL3"
-        android:id="@+id/spinner4"
+        android:layout_below="@id/LL4"
+        android:id="@+id/spinner5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -127,8 +127,8 @@
 
 
     <EditText
-        android:layout_below="@id/spinner4"
-        android:id="@+id/spinner5"
+        android:layout_below="@id/spinner5"
+        android:id="@+id/spinner6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -141,8 +141,7 @@
          android:layout_marginLeft="150dp"
          android:layout_marginTop="400dp"
          android:text="NEXT"
-         android:background="@color/white"
-         
+         android:background="@color/white"/>
 
 
 </RelativeLayout>
