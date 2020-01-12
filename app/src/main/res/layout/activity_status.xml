@@ -141,7 +141,7 @@
          android:layout_marginLeft="150dp"
          android:layout_marginTop="400dp"
          android:text="NEXT"
-         android:background="@color/white"/>
+         android:background="@color/dull_blue"/>
 
 
 </RelativeLayout>
