@@ -1,147 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/base1"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".StatusActivity">
 
     <TextView
         android:id="@+id/titleTV"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:paddingLeft="60dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/thin_block"
+        android:paddingLeft="25dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:text="Education details"
         android:textColor="@color/black"
-        android:textSize="35dp" />
+        android:textSize="25dp" />
 
-    <LinearLayout
-        android:id="@+id/LL1"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/titleTV"
-        android:orientation="horizontal">
+        android:layout_below="@id/titleTV">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="Highest qualification:"
+            android:fontFamily="@font/crimson"
+            android:paddingLeft="15dp"
+            android:text="Highest qualification"
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:autofillHints="enter your quafs" />
-    </LinearLayout>
+            android:id="@+id/qualSP"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/qualIV"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
 
-    <LinearLayout
-        android:id="@+id/LL2"
+        <ImageView
+            android:id="@+id/qualIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/graduation" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/examRL"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL1"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:visibility="gone"
-        >
+        android:layout_below="@id/titleTV"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
+            android:fontFamily="@font/crimson"
+            android:paddingLeft="15dp"
             android:text="Exam Board"
             android:textSize="20dp" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/examSP"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:autofillHints="enter your quafs" />
-    </LinearLayout>
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/examIV"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
 
-    <LinearLayout
-        android:id="@+id/LL3"
+        <ImageView
+            android:id="@+id/examIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/graduation" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL2"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-
-        >
+        android:layout_below="@id/titleTV"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
+            android:fontFamily="@font/crimson"
+            android:paddingLeft="15dp"
             android:text="Course"
             android:textSize="20dp" />
-
         <Spinner
-            android:id="@+id/spinner3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:autofillHints="enter your quafs" />
-    </LinearLayout>
+            android:id="@+id/courseSP"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/courseIV"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
 
-    <LinearLayout
-        android:id="@+id/LL4"
+        <ImageView
+            android:id="@+id/courseIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/graduation" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/LL3"
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal">
+        android:layout_below="@id/titleTV"
+        android:layout_marginTop="25dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="30dp"
-            android:text="lang medium"
+            android:fontFamily="@font/crimson"
+            android:paddingLeft="15dp"
+            android:text="Language Medium"
             android:textSize="20dp" />
-
         <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:autofillHints="enter your quafs" />
-    </LinearLayout>
+            android:id="@+id/langSP"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_toLeftOf="@id/langIV"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+        <ImageView
+            android:id="@+id/langIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/graduation" />
+    </RelativeLayout>
 
 
     <EditText
-        android:layout_below="@id/LL4"
-        android:id="@+id/spinner5"
+        android:id="@+id/passingTV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:hint="Year of passing"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:paddingRight="30dp"
+        android:scrollHorizontally="true"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
-        android:hint="Passing Year" />
+        android:background="@color/dirtyyellow" />
 
 
     <EditText
-        android:layout_below="@id/spinner5"
-        android:id="@+id/spinner6"
+        android:id="@+id/marksTV"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:hint="Marks scored in %"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingLeft="15dp"
+        android:paddingRight="30dp"
+        android:scrollHorizontally="true"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
-        android:hint="% of marks" />
+        android:background="@color/dirtyyellow" />
 
-     <Button
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_marginLeft="150dp"
-         android:layout_marginTop="400dp"
-         android:text="NEXT"
-         android:background="@color/dull_blue"/>
+    <Button
+        android:id="@+id/nextBT"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_pink"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:text="NEXT"
+        android:textColor="@color/white"
+        android:textSize="15dp"/>
 
 
-</RelativeLayout>
+</LinearLayout>

@@ -17,10 +17,26 @@
         android:paddingLeft="30dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:text="KEY SKILLS "
+        android:text="Other Details"
         android:textColor="@color/black"
         android:textSize="35dp" />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_blue"
+        android:fontFamily="@font/crimson"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="40dp"
+        android:hint="Mention your Key-Skills"
+        android:textSize="20dp" />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
 
     <EditText
         android:layout_width="match_parent"
@@ -67,7 +83,7 @@
         android:fontFamily="@font/crimson"
         android:inputType="textEmailAddress"
         android:paddingLeft="40dp"
-        android:hint="Enter your designation"
+        android:hint="Enter your preferred designation"
         android:textSize="20dp" />
 
     <View

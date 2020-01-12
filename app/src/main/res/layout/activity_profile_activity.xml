@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/thin_block"
         android:paddingLeft="40dp"
         android:paddingTop="20dp"
@@ -22,14 +22,19 @@
         android:textSize="35dp" />
 
     <EditText
+        android:id="@+id/nameTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
         android:hint="Enter your name"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
+        android:maxLines="1"
         android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+
+        android:scrollHorizontally="true"
         android:textSize="20dp" />
 
     <View
@@ -42,14 +47,19 @@
 
 
     <EditText
+        android:id="@+id/mobileTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
         android:hint="Enter your mobile no"
-        android:inputType="textEmailAddress"
+        android:inputType="number"
+        android:maxLines="1"
+
         android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:scrollHorizontally="true"
         android:textSize="20dp" />
 
     <View
@@ -62,14 +72,19 @@
 
 
     <EditText
+        android:id="@+id/locationTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
         android:hint="Enter your location"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
+        android:maxLines="1"
         android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+
+        android:scrollHorizontally="true"
         android:textSize="20dp" />
 
     <View
@@ -82,6 +97,7 @@
 
 
     <EditText
+        android:id="@+id/emailTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
@@ -89,7 +105,11 @@
         android:fontFamily="@font/crimson"
         android:hint="Enter your mail id"
         android:inputType="textEmailAddress"
+        android:maxLines="1"
         android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:scrollHorizontally="true"
+
         android:textSize="20dp" />
 
     <View
@@ -102,6 +122,7 @@
 
 
     <EditText
+        android:id="@+id/passwordTV"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="18dp"
@@ -109,7 +130,10 @@
         android:fontFamily="@font/crimson"
         android:hint="Enter your password"
         android:inputType="textPassword"
+        android:maxLines="1"
         android:paddingLeft="40dp"
+        android:paddingRight="30dp"
+        android:scrollHorizontally="true"
         android:textSize="20dp" />
 
     <View
@@ -120,29 +144,38 @@
         android:layout_marginRight="30dp"
         android:background="@color/dirtyyellow" />
 
-
-    <RadioGroup
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingLeft="35dp"
-        android:paddingTop="40dp"
-        android:paddingStart="30dp">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingRight="55dp"
+        <Button
+            android:id="@+id/studentBT"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_pink"
+            android:fontFamily="@font/crimson"
             android:text="Student"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="15dp" />
 
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/workingBT"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button_pink"
+            android:fontFamily="@font/crimson"
             android:text="Working"
-            android:textSize="20dp" />
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            />
+    </LinearLayout>
 
-    </RadioGroup>
 </LinearLayout>
 

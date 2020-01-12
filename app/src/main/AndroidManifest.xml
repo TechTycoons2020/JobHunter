@@ -13,6 +13,7 @@
         <activity android:name=".KeySkillsActivity" />
         <activity android:name=".profile_activity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".StatusActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
