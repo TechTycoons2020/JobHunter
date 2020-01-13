@@ -7,17 +7,17 @@
     android:background="@mipmap/base1"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context=".profile_activity">
+    tools:context=".TenderActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/thin_block"
         android:paddingLeft="40dp"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        android:text="PROFILE"
+        android:text="Company Profile"
         android:textColor="@color/black"
         android:textSize="35dp" />
 
@@ -28,7 +28,7 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
-        android:hint="User Name"
+        android:hint="Organisation Name"
         android:inputType="text"
         android:maxLines="1"
         android:paddingLeft="40dp"
@@ -46,29 +46,7 @@
         android:background="@color/dirtyyellow" />
 
 
-    <EditText
-        android:id="@+id/mobileTV"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/button_blue"
-        android:fontFamily="@font/crimson"
-        android:hint="Mobile Number"
-        android:inputType="number"
-        android:maxLines="1"
 
-        android:paddingLeft="40dp"
-        android:paddingRight="30dp"
-        android:scrollHorizontally="true"
-        android:textSize="20dp" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/dirtyyellow" />
 
 
     <EditText
@@ -78,8 +56,7 @@
         android:layout_marginTop="18dp"
         android:background="@drawable/button_blue"
         android:fontFamily="@font/crimson"
-        android:hint="Email "
-        android:inputType="textEmailAddress"
+        android:hint="OrganisationID "
         android:maxLines="1"
         android:paddingLeft="40dp"
         android:paddingRight="30dp"
@@ -96,32 +73,10 @@
         android:background="@color/dirtyyellow" />
 
 
-    <EditText
-        android:id="@+id/passwordTV"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/button_blue"
-        android:fontFamily="@font/crimson"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:maxLines="1"
-        android:paddingLeft="40dp"
-        android:paddingRight="30dp"
-        android:scrollHorizontally="true"
-        android:textSize="20dp" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="30dp"
-        android:background="@color/dirtyyellow" />
 
 
     <Button
-        android:id="@+id/jobBT"
+        android:id="@+id/continueBT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -130,23 +85,10 @@
         android:fontFamily="@font/crimson"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text="Job / Interships"
+        android:text="Continue"
         android:textColor="@color/white"
         android:textSize="15dp" />
 
-    <Button
-        android:id="@+id/tenderBT"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_pink_round"
-        android:fontFamily="@font/crimson"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:text="Tenders"
-        android:textColor="@color/white"
-        android:textSize="15dp" />
 
 </LinearLayout>
 

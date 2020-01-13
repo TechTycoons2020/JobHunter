@@ -113,17 +113,54 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="30dp"
         android:background="@color/dirtyyellow" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTV">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/button_blue"
+            android:fontFamily="@font/crimson"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="40dp"
+            android:hint="Upload Resume"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/qualIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/graduation" />
+    </RelativeLayout>
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/dirtyyellow" />
 
     <Button
-        android:layout_marginTop="50dp"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:fontFamily="@font/arima"
-        android:textStyle="bold"
+        android:id="@+id/nextBT"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:background="@drawable/button_pink"
-        android:text="UPLOAD RESUME" />
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_pink_round"
+        android:text="Continue"
+        android:layout_marginBottom="300dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
 
 </LinearLayout>

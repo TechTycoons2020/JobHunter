@@ -12,8 +12,9 @@ import android.widget.EditText;
 
 public class profile_activity extends AppCompatActivity {
 
-    Button studentBT,workingBT;
-    EditText nameET,contactET,addressET,mailET,passwordET;
+    Button jobBT,tenderBT;
+    EditText nameET,contactET,mailET,passwordET;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,27 +26,26 @@ public class profile_activity extends AppCompatActivity {
         }
         initUI();
 
-        studentBT.setOnClickListener(new View.OnClickListener() {
+        jobBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(),StatusActivity.class));
             }
         });
-        workingBT.setOnClickListener(new View.OnClickListener() {
+        tenderBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(),WorkerActivity.class));
+                startActivity(new Intent(getApplicationContext(),TenderActivity.class));
             }
         });
 
     }
 
     private void initUI() {
-        studentBT = findViewById(R.id.studentBT);
-        workingBT = findViewById(R.id.workingBT);
+        jobBT = findViewById(R.id.jobBT);
+        tenderBT = findViewById(R.id.tenderBT);
         nameET = findViewById(R.id.nameTV);
         contactET = findViewById(R.id.mobileTV);
-        addressET = findViewById(R.id.locationTV);
         mailET=findViewById(R.id.emailTV);
         passwordET = findViewById(R.id.passwordTV);
     }
