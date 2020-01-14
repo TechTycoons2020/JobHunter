@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".HomeActivity">
 
     <ImageView
         android:layout_width="60dp"
         android:layout_height="85dp"
+        android:paddingLeft="20dp"
         android:src="@drawable/menu"/>
 
 
@@ -22,4 +24,14 @@
         android:text="HOME"
         android:textColor="@color/black"
         android:textSize="35dp" />
-</LinearLayout>
+
+    <LinearLayout/>
+
+
+
+
+
+
+
+
+
