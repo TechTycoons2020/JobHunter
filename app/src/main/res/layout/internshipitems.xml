@@ -9,7 +9,7 @@
         android:layout_marginTop="80dp"
         android:paddingLeft="40dp"
         android:paddingTop="20dp"
-        android:text="JOB TITLE"
+        android:text="DOMAIN"
         android:textColor="@color/black"
         android:textSize="25dp" />
 
@@ -22,15 +22,24 @@
         android:textColor="@color/black"
         android:textSize="25dp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="40dp"
+        android:paddingBottom="20dp"
+        android:text="WORK FROM HOME/LOC."
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="202dp"
             android:layout_height="wrap_content"
-            android:text="EXPERIENCE : "
+            android:text="START DATE : "
             android:textSize="25dp"
             android:paddingLeft="40dp"/>
 
@@ -38,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
-            android:text=" exp"
+            android:text=" date"
             android:textSize="25dp" />
 
     </LinearLayout>
@@ -49,17 +58,17 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
-            android:text="SALARY         : "
+            android:text="DURATION     : "
             android:textSize="25dp" />
 
         <TextView
             android:layout_width="202dp"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
-            android:text=" sal"
+            android:text=" dur"
             android:textSize="25dp" />
 
     </LinearLayout>
@@ -70,9 +79,9 @@
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="LOCATION    : "
+            android:text="STIPEND        : "
             android:textSize="25dp"
             android:paddingLeft="40dp"/>
 
@@ -80,7 +89,28 @@
             android:layout_width="202dp"
             android:layout_height="wrap_content"
             android:paddingLeft="40dp"
-            android:text=" loc"
+            android:text=" Stipend"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:text="APPLY BY      : "
+            android:textSize="25dp"
+            android:paddingLeft="40dp"/>
+
+        <TextView
+            android:layout_width="202dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:text=" date"
             android:textSize="25dp" />
 
     </LinearLayout>
