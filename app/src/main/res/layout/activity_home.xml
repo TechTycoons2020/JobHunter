@@ -4,26 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:orientation="vertical"
     tools:context=".HomeActivity">
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="85dp"
-        android:paddingLeft="20dp"
-        android:srcCompat="@drawable/menu"/>
-
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:paddingLeft="80dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
-        android:text="HOME"
-        android:textColor="@color/black"
-        android:textSize="35dp" />
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="94dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="219dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="80dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="username"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingLeft="80dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text="email"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/jobsBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/button_pink_round"
+        android:fontFamily="@font/crimson"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Jobs"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/internBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_pink_round"
+        android:fontFamily="@font/crimson"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="INTERNSHIPS"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/freeBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_pink_round"
+        android:fontFamily="@font/crimson"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="FREELANCING WORKS"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
 
 </LinearLayout>
 
