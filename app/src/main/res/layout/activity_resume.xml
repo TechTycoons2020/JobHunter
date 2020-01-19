@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/base1"
+    android:fitsSystemWindows="true"
+    tools:context=".JobsActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/thin_block"
+        android:paddingLeft="40dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="Resume"
+        android:textColor="@color/black"
+        android:textSize="35dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/nameET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+            <EditText
+                android:id="@+id/domainET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Domain"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/addressET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Address"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/emailET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Email ID"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/thin_block"
+                android:paddingLeft="40dp"
+                android:paddingBottom="20dp"
+                android:text="Expertise"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <EditText
+                android:id="@+id/expertise1ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/expertise2ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/expertise3ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/expertise4ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/thin_block"
+                android:paddingLeft="40dp"
+                android:paddingBottom="20dp"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <EditText
+                android:id="@+id/expcompanyET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Company Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/explocationET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Company Location"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/expjobtitleET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Job Title"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/thin_block"
+                android:paddingLeft="40dp"
+                android:paddingBottom="20dp"
+                android:text="What's Your Experience?"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/exp1ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+
+            <EditText
+                android:id="@+id/exp2ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/thin_block"
+                android:paddingLeft="40dp"
+                android:paddingBottom="20dp"
+                android:text="Education"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <EditText
+                android:id="@+id/clgET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your College Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/clglocationET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your College Location"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/degreeET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Degree"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/degdurationET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter the Duration"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+
+            <EditText
+                android:id="@+id/clgpercentET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Percentage"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/clgachievementET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Achievements"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+
+            <EditText
+                android:id="@+id/schoolnameET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your School Name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/schoollocET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your School Location"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/qualET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Qualification"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+
+
+            <EditText
+                android:id="@+id/schooldurET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter the Duration"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/schoolpercentET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter Your Percentage"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/schoolachievementET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+                android:hint="Enter your Achievements"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/thin_block"
+                android:paddingLeft="40dp"
+                android:paddingBottom="20dp"
+                android:text="Achievements"
+                android:textColor="@color/black"
+                android:textSize="35dp" />
+
+            <EditText
+                android:id="@+id/achievement1ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/achievement2ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+            <EditText
+                android:id="@+id/achievement3ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/crimson"
+
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingLeft="40dp"
+                android:paddingRight="30dp"
+                android:scrollHorizontally="true"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/dirtyyellow" />
+
+
+            <Button
+                android:id="@+id/continueBT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_pink_round"
+                android:fontFamily="@font/crimson"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginBottom="250dp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
