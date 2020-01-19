@@ -14,6 +14,21 @@ import androidx.core.app.ActivityCompat;
 
 public class CommonUtils {
 
+    public static String Ijobname = "jobname";
+    public static String Icompany = "company";
+    public static String Ilocation = "location";
+    public static String Isalary = "salary";
+    public static String Iexper = "experience";
+    public static String Iapplyby = "applyby";
+    public static String Ijobdesc = "jobdesc";
+    public static String Icomdesc = "comdesc";
+    public static String Icontact = "contact";
+    public static String Ifield = "field";
+    public static String Ilatitude = "latitude";
+    public static String Ilongitude = "longitude";
+    public static String Itype = "type";
+
+
     //Hides Keyboard
     public static void hideKeyboard(Activity activity){
         try {

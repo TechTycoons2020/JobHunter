@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -34,7 +35,8 @@ import static com.firebase.ui.auth.AuthUI.getApplicationContext;
 public class PrivateJobsFragment extends Fragment {
 
     RecyclerView recyclerView;
-    ImageView filterIV,filterTV;
+    ImageView filterIV;
+    TextView filterTV,clearTV;
     ArrayList<Jobs> job_det = new ArrayList<>();
     ArrayList<String> filters ;
     ArrayList<Jobs> result_jobs_det = new ArrayList<>();
@@ -55,6 +57,18 @@ public class PrivateJobsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_privatejobs , container, false);
         initUI(view);
         fetchdata();
+        clearTV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (job_det.isEmpty()){
+                    Toast.makeText(getActivity(), "Fetching Details...Please Wait...", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    adapter = new PrivateJobAdapter(getContext(),job_det,getActivity());
+                    recyclerView.setAdapter(adapter);
+                }
+            }
+        });
         filterTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,6 +113,7 @@ public class PrivateJobsFragment extends Fragment {
 
         filterIV = view.findViewById(R.id.filterIV);
         filterTV = view.findViewById(R.id.filterTV);
+        clearTV = view.findViewById(R.id.clearTV);
         recyclerView = view.findViewById(R.id.jobsRV);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
@@ -125,6 +140,8 @@ public class PrivateJobsFragment extends Fragment {
                             item.setField(document.getString("field"));
 
                             job_det.add(item);
+                            adapter = new PrivateJobAdapter(getContext(),job_det,getActivity());
+                            recyclerView.setAdapter(adapter);
                         }
 
                     }
@@ -181,6 +198,7 @@ public class PrivateJobsFragment extends Fragment {
             builder.show();
     }
     public void filterLocation(ViewGroup par,String str){
+        result_jobs_det.clear();
         if (str!=null) {
             for (int i = 0; i < job_det.size(); i++) {
                 if (job_det.get(i).getLocation().toLowerCase().contains(str.toLowerCase())) {
@@ -195,6 +213,7 @@ public class PrivateJobsFragment extends Fragment {
         }
 
     }public void filterField(ViewGroup par,String str){
+        result_jobs_det.clear();
         if (str!=null) {
             for (int i = 0; i < job_det.size(); i++) {
                 if (job_det.get(i).getField().toLowerCase().contains(str.toLowerCase())) {

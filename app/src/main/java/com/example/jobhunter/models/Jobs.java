@@ -1,5 +1,8 @@
 package com.example.jobhunter.models;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.firebase.firestore.GeoPoint;
 
 public class Jobs {
@@ -22,6 +25,7 @@ public class Jobs {
 
     public Jobs() {
     }
+
 
     public String getJobname() {
         return jobname;
