@@ -1,9 +1,12 @@
 package com.example.jobhunter.models;
 
-public class Jobs {
-    String jobname , companyname , location , experience , salary , applyby ,jobdesc , companydesc;
+import com.google.firebase.firestore.GeoPoint;
 
-    public Jobs(String jobname, String companyname, String location, String experience, String salary, String applyby, String jobdesc, String companydesc) {
+public class Jobs {
+    String jobname , companyname , location , experience , salary , applyby ,jobdesc , companydesc , contact , field ;
+    GeoPoint geotag;
+
+    public Jobs(String jobname, String companyname, String location, String experience, String salary, String applyby, String jobdesc, String companydesc, String contact, String field, GeoPoint geotag) {
         this.jobname = jobname;
         this.companyname = companyname;
         this.location = location;
@@ -12,6 +15,9 @@ public class Jobs {
         this.applyby = applyby;
         this.jobdesc = jobdesc;
         this.companydesc = companydesc;
+        this.contact = contact;
+        this.field = field;
+        this.geotag = geotag;
     }
 
     public Jobs() {
@@ -79,5 +85,29 @@ public class Jobs {
 
     public void setCompanydesc(String companydesc) {
         this.companydesc = companydesc;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getField() {
+        return field;
+    }
+
+    public void setField(String field) {
+        this.field = field;
+    }
+
+    public GeoPoint getGeotag() {
+        return geotag;
+    }
+
+    public void setGeotag(GeoPoint geotag) {
+        this.geotag = geotag;
     }
 }

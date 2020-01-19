@@ -20,6 +20,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/simple_circle"
+            android:src="@drawable/graduation"
             android:padding="8dp" />
 
 
