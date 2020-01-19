@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "320190181058-72c2rjj5itfgkhgibr0mf5rtae671a0k.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.jobhunter",
-            "certificate_hash": "f03078167c4002827e9f8b720d5139d0e4a922f5"
-          }
-        },
-        {
           "client_id": "320190181058-b9252dgn3k7d1a44b15d5h0far1s1s30.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

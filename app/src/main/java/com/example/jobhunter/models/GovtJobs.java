@@ -1,18 +1,21 @@
 package com.example.jobhunter.models;
 
 public class GovtJobs {
-    String jobname , companyname , location , experience , salary , applyby;
+    String jobname , companyname , location , vacancies , applyby, agelimit, qualifications, jobdescription ;
 
-    public GovtJobs(String jobname, String companyname, String location, String experience, String salary, String applyby) {
+    public GovtJobs(String jobname, String companyname, String location, String vacancies, String applyby, String agelimit, String qualifications, String jobdescription) {
         this.jobname = jobname;
         this.companyname = companyname;
         this.location = location;
-        this.experience = experience;
-        this.salary = salary;
+        this.vacancies = vacancies;
         this.applyby = applyby;
+        this.agelimit = agelimit;
+        this.qualifications = qualifications;
+        this.jobdescription = jobdescription;
     }
 
     public GovtJobs() {
+
     }
 
     public String getJobname() {
@@ -39,20 +42,12 @@ public class GovtJobs {
         this.location = location;
     }
 
-    public String getExperience() {
-        return experience;
+    public String getVacancies() {
+        return vacancies;
     }
 
-    public void setExperience(String experience) {
-        this.experience = experience;
-    }
-
-    public String getSalary() {
-        return salary;
-    }
-
-    public void setSalary(String salary) {
-        this.salary = salary;
+    public void setVacancies(String vacancies) {
+        this.vacancies = vacancies;
     }
 
     public String getApplyby() {
@@ -62,4 +57,29 @@ public class GovtJobs {
     public void setApplyby(String applyby) {
         this.applyby = applyby;
     }
+
+    public String getAge() {
+        return agelimit;
+    }
+
+    public void setAge(String agelimit) {
+        this.agelimit = agelimit;
+    }
+
+    public String getQualifications() {
+        return qualifications;
+    }
+
+    public void setQualifications(String qualifications) {
+        this.qualifications = qualifications;
+    }
+
+    public String getJobdescription() {
+        return jobdescription;
+    }
+
+    public void setJobdescription(String jobdescription) {
+        this.jobdescription = jobdescription;
+    }
 }
+

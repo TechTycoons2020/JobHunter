@@ -32,7 +32,7 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
     public GovtJobAdapter.SearchViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View listItem;
-        listItem = layoutInflater.inflate(R.layout.jobitems, parent, false);
+        listItem = layoutInflater.inflate(R.layout.govtjobitems, parent, false);
 
         return new GovtJobAdapter.SearchViewHolder(listItem);
     }
@@ -44,9 +44,10 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
         holder.jobname.setText(model.getJobname());
         holder.company.setText(model.getCompanyname());
         holder.location.setText(model.getLocation());
-        holder.salary.setText(model.getSalary());
-        holder.experience.setText(model.getExperience());
+        holder.vacancy.setText(model.getVacancies());
+        holder.qualification.setText(model.getQualifications());
         holder.apply.setText(model.getApplyby());
+        holder.agelimit.setText(model.getAge());
     }
 
     @Override
@@ -56,7 +57,7 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
 
     public class SearchViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView jobname , company , location , salary , experience , apply;
+        public TextView jobname , company , location , vacancy , qualification , apply , agelimit;
 
         public SearchViewHolder(View itemView) {
             super(itemView);
@@ -64,9 +65,10 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
             jobname = itemView.findViewById(R.id.jobnameTV);
             company = itemView.findViewById(R.id.companyTV);
             location = itemView.findViewById(R.id.locationTV);
-            salary= itemView.findViewById(R.id.salaryTV);
-            experience= itemView.findViewById(R.id.experTV);
+            vacancy= itemView.findViewById(R.id.vacancyTV);
+            qualification= itemView.findViewById(R.id.qualTV);
             apply= itemView.findViewById(R.id.applyTV);
+            agelimit=itemView.findViewById(R.id.ageTV);
 
         }
     }
