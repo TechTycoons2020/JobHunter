@@ -222,6 +222,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                SharedPref.putString(getApplicationContext(), "sp_where", "home");
                 startActivity(intent);
                 alertDialog.dismiss();
             }
@@ -230,6 +231,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), TenderMainActivity.class);
+                SharedPref.putString(getApplicationContext(), "sp_where", "tender");
                 startActivity(intent);
                 alertDialog.dismiss();
             }

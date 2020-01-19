@@ -84,7 +84,7 @@ public class PrivateJobsFragment extends Fragment {
                         String[].class);
 
                 AlertDialog.Builder builder =new AlertDialog.Builder(container.getRootView().getContext(), R.style.MyDialogTheme);
-                builder.setTitle("Pick a color");
+                builder.setTitle("Choose :");
                 builder.setCancelable(true);
                 builder.setItems(str, new DialogInterface.OnClickListener() {
                     @Override

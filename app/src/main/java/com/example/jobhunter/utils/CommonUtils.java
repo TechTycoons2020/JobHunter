@@ -37,6 +37,7 @@ public class CommonUtils {
     public static String Iqualification = "qualification";
     public static String Iskills = "skills";
     public static String Itype = "type";
+    public static String Iemail = "email";
 
 
     //Hides Keyboard

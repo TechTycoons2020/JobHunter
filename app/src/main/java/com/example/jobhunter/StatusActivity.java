@@ -1,5 +1,6 @@
 package com.example.jobhunter;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.widget.NestedScrollView;
 
@@ -20,29 +21,49 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.jobhunter.utils.CommonUtils;
 import com.example.jobhunter.utils.MonthYearPickerDialog;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class StatusActivity extends AppCompatActivity {
 
-    Button nextBT, yesBT, noBT,studentBT,workinBT;
+    Button nextBT, yesBT, noBT, studentBT, workinBT;
     Spinner qualSP, examSP, courseSP, langSP;
     EditText yearofpassET, marksET;
     RelativeLayout examRL;
     NestedScrollView scrollView;
+    String email = "";
+    GifImageView progress;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    CollectionReference usercolref = db.collection("userprofile");
 
     Spinner qual2SP, salarySP, availabilitySP;
     TextView fromTV, toTV;
     EditText jobET, companyET;
     RelativeLayout workingRL;
-    LinearLayout studentLL,workingLL;
+    LinearLayout studentLL, workingLL;
     String value = "";
 
 
     //Spinner populations
-    ArrayAdapter<String> qualADP, examADP, course12ADP, courseugADP, langADP,salaryADP, availADP;
+    ArrayAdapter<String> qualADP, examADP, course12ADP, courseugADP, langADP, salaryADP, availADP;
     ArrayList<String> qualAL, examAL, course12AL, courseugAL, langAL, salaryAL, availAL;
 
     @Override
@@ -56,6 +77,8 @@ public class StatusActivity extends AppCompatActivity {
         }
 
         intiUI();
+        Intent inte = getIntent();
+        email = inte.getStringExtra(CommonUtils.Iemail);
 
         //data filling Up
         fillUP();
@@ -151,14 +174,55 @@ public class StatusActivity extends AppCompatActivity {
         nextBT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), KeySkillsActivity.class));
+                progress.setVisibility(View.VISIBLE);
+                if (qualSP.getSelectedItem().toString().equals("   -   ") || courseSP.getSelectedItem().toString().equals("   -   ") || langSP.getSelectedItem().toString().equals("   -   ") || marksET.getText().toString().isEmpty() || yearofpassET.getText().toString().isEmpty()) {
+                    Toast.makeText(StatusActivity.this, "Please fill all required Fields", Toast.LENGTH_SHORT).show();
+                    progress.setVisibility(View.GONE);
+                } else {
+                    final Map<String, Object> jobdetailsMAP = new HashMap<>();
+                    jobdetailsMAP.put("qual", qualSP.getSelectedItem().toString());
+                    jobdetailsMAP.put("course", courseSP.getSelectedItem().toString());
+                    jobdetailsMAP.put("lang", langSP.getSelectedItem().toString());
+                    jobdetailsMAP.put("yearpass", yearofpassET.getText().toString().trim());
+                    jobdetailsMAP.put("Marks", marksET.getText().toString().trim());
+
+                    usercolref
+                            .whereEqualTo("email", email)
+                            .get()
+                            .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                                @Override
+                                public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                                    for (QueryDocumentSnapshot document : queryDocumentSnapshots) {
+                                        final String documentid = document.getId();
+                                        usercolref.document(documentid).set(jobdetailsMAP, SetOptions.merge())
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        Intent intent = new Intent(getApplicationContext(), KeySkillsActivity.class);
+                                                        intent.putExtra(CommonUtils.Iemail, email);
+                                                        startActivity(intent);
+                                                        Toast.makeText(StatusActivity.this, "Upload successful !!!", Toast.LENGTH_SHORT).show();
+                                                        progress.setVisibility(View.GONE);
+                                                    }
+                                                }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Toast.makeText(StatusActivity.this, "Upload failure", Toast.LENGTH_SHORT).show();
+                                                progress.setVisibility(View.GONE);
+                                            }
+                                        });
+
+                                    }
+                                }
+                            });
+                }
             }
         });
 
         jobET.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                scrollView.scrollTo(0,scrollView.getBottom());
+                scrollView.scrollTo(0, scrollView.getBottom());
                 return false;
             }
         });
@@ -245,12 +309,15 @@ public class StatusActivity extends AppCompatActivity {
         workinBT = findViewById(R.id.workingBT);
         yesBT = findViewById(R.id.yesBT);
         noBT = findViewById(R.id.noBT);
-        scrollView =findViewById(R.id.scrollview);
+        scrollView = findViewById(R.id.scrollview);
 
         yearofpassET = findViewById(R.id.passingTV);
         marksET = findViewById(R.id.marksTV);
         examRL = findViewById(R.id.examRL);
+
+        progress = findViewById(R.id.progressIV);
     }
+
     private void datePicker(final String key) {
 
 
@@ -258,10 +325,10 @@ public class StatusActivity extends AppCompatActivity {
         pickerDialog.setListener(new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int i2) {
-                value = month+"/"+year;
-                if(key.equals("from")){
+                value = month + "/" + year;
+                if (key.equals("from")) {
                     fromTV.setText(value);
-                }else if (key.equals("to")){
+                } else if (key.equals("to")) {
                     toTV.setText(value);
                 }
             }

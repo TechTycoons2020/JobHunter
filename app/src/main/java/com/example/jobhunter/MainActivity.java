@@ -26,9 +26,14 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(SharedPref.getBoolean(getApplicationContext(),"sp_loggedin") == true)
+                if(SharedPref.getBoolean(getApplicationContext(),"sp_loggedin") == true && SharedPref.getString(getApplicationContext(),"sp_where").equals("home"))
                 {
                     Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+                    startActivity(intent);
+                }
+                else if(SharedPref.getBoolean(getApplicationContext(),"sp_loggedin") == true && SharedPref.getString(getApplicationContext(),"sp_where").equals("tender"))
+                {
+                    Intent intent = new Intent(MainActivity.this,TenderMainActivity.class);
                     startActivity(intent);
                 }
                 else {
