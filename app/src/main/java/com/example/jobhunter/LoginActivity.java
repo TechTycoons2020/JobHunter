@@ -16,6 +16,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText emailET, passwordET;
     Button loginBT, signupBT;
     ImageView googleIV;
+    LinearLayout guest;
     GifImageView progressIV;
     private static final String TAG = "login_test";
 
@@ -94,6 +96,12 @@ public class LoginActivity extends AppCompatActivity {
                 login_option(emailET.getText().toString().trim(), passwordET.getText().toString().trim());
             }
         });
+        guest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), JobsActivity.class));
+            }
+        });
 
     }
 
@@ -104,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
         signupBT = findViewById(R.id.signupBT);
         googleIV = findViewById(R.id.googleIV);
         progressIV = findViewById(R.id.progressIV);
+        guest = findViewById(R.id.guestlogin);
     }
 
     public void initGoogleSignIn() {

@@ -40,6 +40,8 @@ public class TenderMainActivity extends AppCompatActivity {
         initUI();
 
         tenders.add(new Tenders("Agro Product Tenders","India Tenders","15-feb-2020","200 billion","3821612","Tenders for availing short term loans of Rs.20000 crores with green shoe options"));
+
+
         recyclerView.setAdapter(new TenderAdapter(getApplicationContext(),tenders,TenderMainActivity.this));
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
