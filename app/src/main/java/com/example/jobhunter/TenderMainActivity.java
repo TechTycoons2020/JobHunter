@@ -39,9 +39,11 @@ public class TenderMainActivity extends AppCompatActivity {
         }
         initUI();
 
-        tenders.add(new Tenders("Agro Product Tenders","India Tenders","15-feb-2020","200 billion","3821612","Tenders for availing short term loans of Rs.20000 crores with green shoe options"));
-
-
+        tenders.add(new Tenders("Agro Product Tenders","India Tenders","15-feb-2020","200 billion","3821612","Tenders for availing short term loans of Rs.20000 crores with green shoe options."));
+        tenders.add(new Tenders("Telecommunication Services / Equipments Tenders","India Tenders","20-Jan-2020","21.94 billion","37231363","Provision of 2g plus 4g based mobile services at mha identified tower locations in left wing extremism lwe-ii affected areas."));
+        tenders.add(new Tenders("Shipping Tenders","India Tenders","17-Mar-2020","4.61 billion","38291435","Re construction of north jetty at naval base on EPC contract basis."));
+        tenders.add(new Tenders("Civil Works Tenders","Bangladesh Tenders","17-Feb-2020","942.06 million","38266919","Construction of flexible pavement with earth work in road embankment and concrete slope protection at 46th km to 52nd km of sunamganj-madanpur-dirai-sulla-azmeriganj-habiganj road."));
+        tenders.add(new Tenders("Roads Tenders","Multi State Tenders","27-Jan-2020 ","8.94 Billion","32980454","Construction of Four Lane Expressway ~ From Sindhrej Village to Vejalka Village of Ahmedabad District From Km 22.000 to Km 48.520 of Ahmedabad-dholera Greenfield Alignment Nh-751 on Ham Under Bmp in the State of Gujarat Pkg-ii."));
         recyclerView.setAdapter(new TenderAdapter(getApplicationContext(),tenders,TenderMainActivity.this));
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
