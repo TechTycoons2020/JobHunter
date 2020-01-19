@@ -10,7 +10,10 @@ import android.net.Uri;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.app.ActivityCompat;
+
+import com.example.jobhunter.R;
 
 public class CommonUtils {
 
@@ -26,6 +29,13 @@ public class CommonUtils {
     public static String Ifield = "field";
     public static String Ilatitude = "latitude";
     public static String Ilongitude = "longitude";
+    public static String Iduration = "duration";
+    public static String Istart = "start";
+    public static String Istipend= "stipend";
+    public static String Ivancancy = "vacancy";
+    public static String Iagelimit = "agelimit";
+    public static String Iqualification = "qualification";
+    public static String Iskills = "skills";
     public static String Itype = "type";
 
 
@@ -62,6 +72,19 @@ public class CommonUtils {
             }
         }
         return true;
+    }
+
+    //opensCustomBrowser
+    public static void openCustomBrowser(Context context,String url){
+        try{
+            CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+            CustomTabsIntent customTabsIntent = builder.build();
+            customTabsIntent.intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            customTabsIntent.launchUrl(context, Uri.parse(url));
+            builder.setToolbarColor(context.getResources().getColor(R.color.colorAccent));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
 

@@ -8,6 +8,7 @@
     android:fitsSystemWindows="true">
 
     <TextView
+        android:id="@+id/govt"
         android:layout_width="140dp"
         android:layout_height="45dp"
         android:layout_marginTop="40dp"
@@ -33,12 +34,53 @@
         android:backgroundTint="@color/light_gray"
         android:textSize="20dp" />
 
+    <TextView
+        android:id="@+id/filterTV"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/govt"
+        android:layout_toLeftOf="@id/filterIV"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="@font/thin_block"
+        android:text="Filters"
+        android:textColor="@color/shiny_blue"
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/clearTV"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/govt"
+        android:layout_alignParentLeft="true"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="@font/thin_block"
+        android:text="Clear"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/shiny_blue"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/filterIV"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:srcCompat="@drawable/setting"
+        android:tint="@color/shiny_blue"
+        android:padding="10dp"
+        android:layout_below="@id/govt"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        />
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/jobsRV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="130dp"
         android:layout_marginBottom="50dp" />
 
 
