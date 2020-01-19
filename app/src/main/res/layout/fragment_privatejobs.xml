@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/home1"
+    android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/thin_block"
+        android:text="Private Jobs"
+        android:textColor="@color/shiny_blue"
+        android:background="@drawable/box"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="280dp"
+        android:textAlignment="gravity"
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="@font/thin_block"
+        android:text="Govt .."
+        android:textColor="@color/gray_dark"
+        android:background="@drawable/box"
+        android:backgroundTint="@color/light_gray"
+        android:textSize="20dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/jobsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="50dp" />
+
+
+
+
+</RelativeLayout>

@@ -1,87 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/box"
+    android:orientation="vertical">
 
     <TextView
+        android:id="@+id/jobnameTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:paddingLeft="40dp"
-        android:paddingTop="20dp"
-        android:text="JOB TITLE"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/thin_block"
+        android:text="Job Domain"
         android:textColor="@color/black"
         android:textSize="25dp" />
 
     <TextView
+        android:id="@+id/companyTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="40dp"
-        android:paddingBottom="20dp"
-        android:text="COMPANY NAME"
-        android:textColor="@color/black"
-        android:textSize="25dp" />
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/crimson"
+        android:text="Company Name"
+        android:textColor="@color/gray"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/locationTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="@font/thin_block"
+        android:text="Location"
+        android:textColor="@color/shiny_blue"
+        android:textSize="20dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="EXPERIENCE : "
-            android:textSize="25dp"
-            android:paddingLeft="40dp"/>
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/crimson"
+            android:text="Experience :"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/experTV"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:text=" exp"
-            android:textSize="25dp" />
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/crimson"
+            android:text="5 years"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:text="SALARY         : "
-            android:textSize="25dp" />
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/crimson"
+            android:text="Salary :"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
         <TextView
-            android:layout_width="202dp"
+            android:id="@+id/salaryTV"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:text=" sal"
-            android:textSize="25dp" />
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/crimson"
+            android:text="Rs.30,000"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="15dp"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="LOCATION    : "
-            android:textSize="25dp"
-            android:paddingLeft="40dp"/>
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/crimson"
+            android:text="Apply By :"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
         <TextView
-            android:layout_width="202dp"
+            android:id="@+id/applyTV"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="40dp"
-            android:text=" loc"
-            android:textSize="25dp" />
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/crimson"
+            android:text="25/1/2020"
+            android:textColor="@color/gray_dark"
+            android:textSize="16dp" />
 
     </LinearLayout>
 

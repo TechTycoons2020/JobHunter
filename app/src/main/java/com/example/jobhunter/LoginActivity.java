@@ -1,13 +1,16 @@
 package com.example.jobhunter;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -31,10 +34,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class LoginActivity extends AppCompatActivity {
     EditText emailET, passwordET;
     Button loginBT, signupBT;
     ImageView googleIV;
+    GifImageView progressIV;
     private static final String TAG = "login_test";
 
     //Initiating Google Sign-In variables
@@ -97,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBT = findViewById(R.id.loginBT);
         signupBT = findViewById(R.id.signupBT);
         googleIV = findViewById(R.id.googleIV);
+        progressIV = findViewById(R.id.progressIV);
     }
 
     public void initGoogleSignIn() {
@@ -110,6 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        progressIV.setVisibility(View.VISIBLE);
 
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -133,10 +141,12 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             SharedPref.putBoolean(getApplicationContext(), "sp_loggedin", true);
-                            Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                            startActivity(intent);
+                            ChooseCategory();
+                            progressIV.setVisibility(View.GONE);
+
                         } else {
                             Log.d(TAG, "signInWithCredential:failure  " + task.getException().toString());
+                            progressIV.setVisibility(View.GONE);
                         }
                     }
                 });
@@ -144,13 +154,14 @@ public class LoginActivity extends AppCompatActivity {
                 //Toast.makeText(this, "Please use SSN mail ID", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 Log.d(TAG, "error-1: " + e.toString());
-
-
+                progressIV.setVisibility(View.GONE);
             }
         }
     }
 
     public void login_option(String email, String password) {
+        progressIV.setVisibility(View.VISIBLE);
+
         if (!email.isEmpty() && !password.isEmpty()) {
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -160,11 +171,12 @@ public class LoginActivity extends AppCompatActivity {
                                 Log.d(TAG, "signInWithEmail:success");
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 SharedPref.putBoolean(getApplicationContext(), "sp_loggedin", true);
-                                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                                startActivity(intent);
+                                ChooseCategory();
+                                progressIV.setVisibility(View.GONE);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                progressIV.setVisibility(View.GONE);
                             }
 
                         }
@@ -173,10 +185,12 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Log.d(TAG, "error-1: " + e.toString());
+                            progressIV.setVisibility(View.GONE);
                         }
                     });
         } else {
             Toast.makeText(this, "Credentials Empty", Toast.LENGTH_SHORT).show();
+            progressIV.setVisibility(View.GONE);
         }
     }
 
@@ -188,5 +202,37 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(startMain);
         finishAffinity();
         finish();
+    }
+    void ChooseCategory() {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.alert_answer, null);
+        dialogBuilder.setView(dialogView);
+        dialogBuilder.setCancelable(false);
+
+        Button jobs = dialogView.findViewById(R.id.jobsBT);
+        Button tender = dialogView.findViewById(R.id.tenderBT);
+
+        final AlertDialog alertDialog = dialogBuilder.create();
+        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+        alertDialog.show();
+
+
+        jobs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
+                alertDialog.dismiss();
+            }
+        });
+        tender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TenderMainActivity.class);
+                startActivity(intent);
+                alertDialog.dismiss();
+            }
+        });
     }
 }
