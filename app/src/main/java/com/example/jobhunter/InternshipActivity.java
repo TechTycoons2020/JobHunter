@@ -37,11 +37,11 @@ public class InternshipActivity extends AppCompatActivity {
 
         initUI();
 
-        jobs.add(new Interns("Digital Marketing","Nana Enterprise Private Limited","Work from Home","1 month","Immediately","Rs 10000","3 Feb 2020",""));
-        jobs.add(new Interns("Campus Ambassador","Srijan,IIT(ISM)","Dhanbad","3 weeks","Immediately","Performance based","30 Jan 2020",""));
-        jobs.add(new Interns("Graphic Design","myHQ","Delhi","Immediately","5 months","Rs 15000","3 Feb 2020",""));
-        jobs.add(new Interns("Animation","Trending News Buzz","Work from Home","Immediately","6 months","Rs 3000-6000","3 Feb 2020",""));
-        jobs.add(new Interns("Human Resources","Big Feather","Mumbai","6 months","Immediately","Rs 5000","3 Feb 2020",""));
+        jobs.add(new Interns("Digital Marketing","Nana Enterprise Private Limited","Work from Home","1 month","Immediately","Rs 10000","3 Feb 2020","Working on Photoshop editing and content creation for product pictures for e-commerce websites.Generating creatives for active engagement on social media platforms."));
+        jobs.add(new Interns("Campus Ambassador","Srijan,IIT(ISM)","Dhanbad","3 weeks","Immediately","Performance based","30 Jan 2020","This campus ambassador is an accredited representative of Srijan in his/her institute and is the cardinal link between the two.As a campus ambassador you shall be a correspondent of Srijan and shall work to ensure the maximum number of participants at Srijan from your college."));
+        jobs.add(new Interns("Graphic Design","myHQ","Delhi","Immediately","5 months","Rs 15000","3 Feb 2020","Ideate and create fresh innovative designs for offline and digital collaterals.Strategize and develop the visual imagery of myHQ so that the brand is perceived as millenial,quirky,trendy and trust-worthy.Participate & brainstorm in creative meetings to advise with creatives,&visual communication."));
+        jobs.add(new Interns("Animation","Trending News Buzz","Work from Home","Immediately","6 months","Rs 3000-6000","3 Feb 2020","Make 2-3 minutes animated videos like kids stories.Make picture in picture videos.Make at least 1 viseo in 2 days"));
+        jobs.add(new Interns("Human Resources","Big Feather","Mumbai","6 months","Immediately","Rs 5000","3 Feb 2020","Updating company databases by inputting new employee contact information and employment details.Screening potential employee's resumes and application forms to identify suitable candidates to fill company job vacancies.Scheduling and confirming interviews with candidates.Posting job advertisement to job boards and social media platforms."));
         recyclerView.setAdapter(new InternAdapter(getApplicationContext(),jobs,InternshipActivity.this));
         //Al populate
         //adater al set
