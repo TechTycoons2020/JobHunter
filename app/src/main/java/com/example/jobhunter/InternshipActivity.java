@@ -37,7 +37,11 @@ public class InternshipActivity extends AppCompatActivity {
 
         initUI();
 
-        jobs.add(new Interns("Digital Marketing","Nana Enterprise Private Limited","Work from Home","Immediately","1 month","Rs 10000","3 Feb 2020"));
+        jobs.add(new Interns("Digital Marketing","Nana Enterprise Private Limited","Work from Home","1 month","Immediately","Rs 10000","3 Feb 2020",""));
+        jobs.add(new Interns("Campus Ambassador","Srijan,IIT(ISM)","Dhanbad","3 weeks","Immediately","Performance based","30 Jan 2020",""));
+        jobs.add(new Interns("Graphic Design","myHQ","Delhi","Immediately","5 months","Rs 15000","3 Feb 2020",""));
+        jobs.add(new Interns("Animation","Trending News Buzz","Work from Home","Immediately","6 months","Rs 3000-6000","3 Feb 2020",""));
+        jobs.add(new Interns("Human Resources","Big Feather","Mumbai","6 months","Immediately","Rs 5000","3 Feb 2020",""));
         recyclerView.setAdapter(new InternAdapter(getApplicationContext(),jobs,InternshipActivity.this));
         //Al populate
         //adater al set

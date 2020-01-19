@@ -32,7 +32,7 @@ public class CommonUtils {
     public static String Iduration = "duration";
     public static String Istart = "start";
     public static String Istipend= "stipend";
-    public static String Ivancancy = "vacancy";
+    public static String Ivacancy = "vacancy";
     public static String Iagelimit = "agelimit";
     public static String Iqualification = "qualification";
     public static String Iskills = "skills";

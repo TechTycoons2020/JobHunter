@@ -2,16 +2,20 @@ package com.example.jobhunter.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.jobhunter.JobExpandActivity;
 import com.example.jobhunter.R;
 import com.example.jobhunter.models.GovtJobs;
+import com.example.jobhunter.utils.CommonUtils;
 
 import java.util.ArrayList;
 
@@ -48,6 +52,24 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
         holder.qualification.setText(model.getQualifications());
         holder.apply.setText(model.getApplyby());
         holder.agelimit.setText(model.getAge());
+
+        holder.baseLL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, JobExpandActivity.class);
+                intent.putExtra(CommonUtils.Ijobname,model.getJobname());
+                intent.putExtra(CommonUtils.Icompany,model.getCompanyname());
+                intent.putExtra(CommonUtils.Ilocation,model.getLocation());
+                intent.putExtra(CommonUtils.Ivacancy,model.getVacancies());
+                intent.putExtra(CommonUtils.Iqualification,model.getQualifications());
+                intent.putExtra(CommonUtils.Iapplyby,model.getApplyby());
+                intent.putExtra(CommonUtils.Iagelimit,model.getAge());
+                intent.putExtra(CommonUtils.Ijobdesc,model.getJobdescription());
+                intent.putExtra(CommonUtils.Itype,"2");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,11 +80,13 @@ public class GovtJobAdapter extends RecyclerView.Adapter<GovtJobAdapter.SearchVi
     public class SearchViewHolder extends RecyclerView.ViewHolder {
 
         public TextView jobname , company , location , vacancy , qualification , apply , agelimit;
+        LinearLayout baseLL;
 
         public SearchViewHolder(View itemView) {
             super(itemView);
 
             jobname = itemView.findViewById(R.id.jobnameTV);
+            baseLL = itemView.findViewById(R.id.baseLL);
             company = itemView.findViewById(R.id.companyTV);
             location = itemView.findViewById(R.id.locationTV);
             vacancy= itemView.findViewById(R.id.vacancyTV);

@@ -1,20 +1,20 @@
 package com.example.jobhunter.models;
 
 public class Interns {
-    String domain , companyname , location , duration , startdate, stipend, applyby ;
+    String domain , companyname , location , duration , startdate, stipend, applyby ,jobdesc;
 
-    public Interns(String domain, String companyname, String location, String duration, String startdate, String stipend, String applyby) {
+    public Interns(String domain, String companyname, String location, String duration, String startdate, String stipend, String applyby, String jobdesc) {
         this.domain = domain;
         this.companyname = companyname;
         this.location = location;
-        this.duration= duration;
-        this.applyby = applyby;
+        this.duration = duration;
         this.startdate = startdate;
         this.stipend = stipend;
+        this.applyby = applyby;
+        this.jobdesc = jobdesc;
     }
 
     public Interns() {
-
     }
 
     public String getDomain() {
@@ -71,6 +71,14 @@ public class Interns {
 
     public void setApplyby(String applyby) {
         this.applyby = applyby;
+    }
+
+    public String getJobdesc() {
+        return jobdesc;
+    }
+
+    public void setJobdesc(String jobdesc) {
+        this.jobdesc = jobdesc;
     }
 }
 

@@ -68,6 +68,7 @@ public class PrivateJobAdapter extends RecyclerView.Adapter<PrivateJobAdapter.Se
                 intent.putExtra(CommonUtils.Ilatitude,Double.toString(model.getGeotag().getLatitude()));
                 intent.putExtra(CommonUtils.Ilongitude,Double.toString(model.getGeotag().getLongitude()));
                 intent.putExtra(CommonUtils.Itype,"1");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
              }
         });

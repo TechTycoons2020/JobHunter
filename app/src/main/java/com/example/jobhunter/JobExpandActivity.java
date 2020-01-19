@@ -21,14 +21,14 @@ import android.widget.Toast;
 import com.example.jobhunter.utils.CommonUtils;
 
 public class JobExpandActivity extends AppCompatActivity {
-    TextView jobnameTV , companyTV, locationTV,qualTV,
-            fieldTV,startTV,experTV,salaryTV,skillsTV,
-            durationTV,stipendTV,vacancyTV,agelimitTV,applybyTV,
-            jobdescTV,compdescTV;
-    LinearLayout qualLL,fieldLL,startLL,experLL,salaryLL,skillLL,
-            durationLL,stipendLL,vacancyLL,
-            agelimitLL,applybyLL,jobdescLL,compdescLL;
-    ImageView gpsIV,phoneIV;
+    TextView jobnameTV, companyTV, locationTV, qualTV,
+            fieldTV, startTV, experTV, salaryTV, skillsTV,
+            durationTV, stipendTV, vacancyTV, agelimitTV, applybyTV,
+            jobdescTV, compdescTV;
+    LinearLayout qualLL, fieldLL, startLL, experLL, salaryLL, skillLL,
+            durationLL, stipendLL, vacancyLL,
+            agelimitLL, applybyLL, jobdescLL, compdescLL;
+    ImageView gpsIV, phoneIV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class JobExpandActivity extends AppCompatActivity {
 
         final Intent intent = getIntent();
         String keyType = intent.getStringExtra(CommonUtils.Itype);
-        if (keyType.equals("1")){
+        if (keyType.equals("1")) {
             experLL.setVisibility(View.VISIBLE);
             salaryLL.setVisibility(View.VISIBLE);
             applybyLL.setVisibility(View.VISIBLE);
@@ -93,17 +93,53 @@ public class JobExpandActivity extends AppCompatActivity {
                                 new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION},
                                 1);
 
-                    }
-                    else {
+                    } else {
                         if (!CommonUtils.alerter(getApplicationContext())) {
-                            CommonUtils.openCustomBrowser(getApplicationContext(), "https://www.google.com/maps/place/" +  intent.getStringExtra(CommonUtils.Ilatitude) + "," + intent.getStringExtra(CommonUtils.Ilongitude));
+                            CommonUtils.openCustomBrowser(getApplicationContext(), "https://www.google.com/maps/place/" + intent.getStringExtra(CommonUtils.Ilatitude) + "," + intent.getStringExtra(CommonUtils.Ilongitude));
                         } else {
                             Toast.makeText(getApplicationContext(), "Please Check Network connection", Toast.LENGTH_SHORT).show();
                         }
 
-                    }}
+                    }
+                }
             });
-            Log.i("testttttt", "onCreate:"+intent.getStringExtra(CommonUtils.Ilatitude)+" "+intent.getStringExtra(CommonUtils.Ilongitude)+"...");
+            Log.i("testttttt", "onCreate:" + intent.getStringExtra(CommonUtils.Ilatitude) + " " + intent.getStringExtra(CommonUtils.Ilongitude) + "...");
+        }
+        if (keyType.equals("2")) {
+            applybyLL.setVisibility(View.VISIBLE);
+            jobdescLL.setVisibility(View.VISIBLE);
+            vacancyLL.setVisibility(View.VISIBLE);
+            qualLL.setVisibility(View.VISIBLE);
+            agelimitLL.setVisibility(View.VISIBLE);
+
+
+            jobnameTV.setText(intent.getStringExtra(CommonUtils.Ijobname));
+            companyTV.setText(intent.getStringExtra(CommonUtils.Icompany));
+            locationTV.setText(intent.getStringExtra(CommonUtils.Ilocation));
+            applybyTV.setText(intent.getStringExtra(CommonUtils.Iapplyby));
+            jobdescTV.setText(intent.getStringExtra(CommonUtils.Ijobdesc));
+            vacancyTV.setText(intent.getStringExtra(CommonUtils.Ivacancy));
+            qualTV.setText(intent.getStringExtra(CommonUtils.Iqualification));
+            agelimitTV.setText(intent.getStringExtra(CommonUtils.Iagelimit));
+
+        }
+        if (keyType.equals("3")) {
+            applybyLL.setVisibility(View.VISIBLE);
+            jobdescLL.setVisibility(View.VISIBLE);
+            durationLL.setVisibility(View.VISIBLE);
+            startLL.setVisibility(View.VISIBLE);
+            stipendLL.setVisibility(View.VISIBLE);
+
+
+            jobnameTV.setText(intent.getStringExtra(CommonUtils.Ijobname));
+            companyTV.setText(intent.getStringExtra(CommonUtils.Icompany));
+            locationTV.setText(intent.getStringExtra(CommonUtils.Ilocation));
+            applybyTV.setText(intent.getStringExtra(CommonUtils.Iapplyby));
+            jobdescTV.setText(intent.getStringExtra(CommonUtils.Ijobdesc));
+            durationTV.setText(intent.getStringExtra(CommonUtils.Iduration));
+            startTV.setText(intent.getStringExtra(CommonUtils.Istart));
+            stipendTV.setText(intent.getStringExtra(CommonUtils.Istipend));
+
         }
 
 
@@ -113,50 +149,50 @@ public class JobExpandActivity extends AppCompatActivity {
         jobnameTV = findViewById(R.id.jobnameTV);
         companyTV = findViewById(R.id.companyTV);
         locationTV = findViewById(R.id.locationTV);
-        qualTV= findViewById(R.id.qualTV);
-        fieldTV= findViewById(R.id.fieldTV);
-        startTV= findViewById(R.id.startTV);
+        qualTV = findViewById(R.id.qualTV);
+        fieldTV = findViewById(R.id.fieldTV);
+        startTV = findViewById(R.id.startTV);
         experTV = findViewById(R.id.experTV);
-        salaryTV= findViewById(R.id.salaryTV);
-        skillsTV= findViewById(R.id.skillsTV);
-        durationTV= findViewById(R.id.durationTV);
-        stipendTV= findViewById(R.id.stipendTV);
-        vacancyTV= findViewById(R.id.vacancyTV);
-        agelimitTV= findViewById(R.id.agelimitTV);
-        applybyTV= findViewById(R.id.applyTV);
-        jobdescTV= findViewById(R.id.jobdescTV);
-        compdescTV= findViewById(R.id.comdescTV);
+        salaryTV = findViewById(R.id.salaryTV);
+        skillsTV = findViewById(R.id.skillsTV);
+        durationTV = findViewById(R.id.durationTV);
+        stipendTV = findViewById(R.id.stipendTV);
+        vacancyTV = findViewById(R.id.vacancyTV);
+        agelimitTV = findViewById(R.id.agelimitTV);
+        applybyTV = findViewById(R.id.applyTV);
+        jobdescTV = findViewById(R.id.jobdescTV);
+        compdescTV = findViewById(R.id.comdescTV);
 
         qualLL = findViewById(R.id.qualLL);
         qualLL.setVisibility(View.GONE);
-        fieldLL= findViewById(R.id.fieldLL);
+        fieldLL = findViewById(R.id.fieldLL);
         fieldLL.setVisibility(View.GONE);
-        startLL= findViewById(R.id.startLL);
+        startLL = findViewById(R.id.startLL);
         startLL.setVisibility(View.GONE);
-        experLL= findViewById(R.id.experLL);
+        experLL = findViewById(R.id.experLL);
         experLL.setVisibility(View.GONE);
-        salaryLL= findViewById(R.id.salaryLL);
+        salaryLL = findViewById(R.id.salaryLL);
         salaryLL.setVisibility(View.GONE);
-        skillLL= findViewById(R.id.skillLL);
+        skillLL = findViewById(R.id.skillLL);
         skillLL.setVisibility(View.GONE);
-        durationLL= findViewById(R.id.durationLL);
+        durationLL = findViewById(R.id.durationLL);
         durationLL.setVisibility(View.GONE);
-        stipendLL= findViewById(R.id.stipendLL);
+        stipendLL = findViewById(R.id.stipendLL);
         stipendLL.setVisibility(View.GONE);
-        vacancyLL= findViewById(R.id.vacancyLL);
+        vacancyLL = findViewById(R.id.vacancyLL);
         vacancyLL.setVisibility(View.GONE);
-        agelimitLL= findViewById(R.id.agelimitLL);
+        agelimitLL = findViewById(R.id.agelimitLL);
         agelimitLL.setVisibility(View.GONE);
-        applybyLL= findViewById(R.id.applybyLL);
+        applybyLL = findViewById(R.id.applybyLL);
         applybyLL.setVisibility(View.GONE);
-        jobdescLL= findViewById(R.id.jobdescLL);
+        jobdescLL = findViewById(R.id.jobdescLL);
         jobdescLL.setVisibility(View.GONE);
-        compdescLL= findViewById(R.id.compdescLL);
+        compdescLL = findViewById(R.id.compdescLL);
         compdescLL.setVisibility(View.GONE);
 
-        phoneIV=findViewById(R.id.phoneIV);
+        phoneIV = findViewById(R.id.phoneIV);
         phoneIV.setVisibility(View.GONE);
-        gpsIV=findViewById(R.id.gpsIV);
+        gpsIV = findViewById(R.id.gpsIV);
         gpsIV.setVisibility(View.GONE);
 
     }

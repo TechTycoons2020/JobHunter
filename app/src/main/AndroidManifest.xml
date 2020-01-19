@@ -21,6 +21,7 @@
         <activity android:name=".TenderMainActivity" />
         <activity android:name=".FreelanceActivity" />
         <activity android:name=".InternshipActivity" />
+        <activity android:name=".ResumeActivity"/>
         <activity android:name=".JobsActivity" />
         <activity android:name=".TenderActivity" />
         <activity android:name=".KeySkillsActivity" />

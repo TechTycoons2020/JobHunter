@@ -112,6 +112,7 @@ public class PrivateJobsFragment extends Fragment {
     void initUI(View view){
 
         filterIV = view.findViewById(R.id.filterIV);
+        filterIV.setVisibility(View.GONE);
         filterTV = view.findViewById(R.id.filterTV);
         clearTV = view.findViewById(R.id.clearTV);
         recyclerView = view.findViewById(R.id.jobsRV);
