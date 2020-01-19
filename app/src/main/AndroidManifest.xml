@@ -17,11 +17,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".JobExpandActivity"></activity>
+        <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".JobExpandActivity" />
         <activity android:name=".TenderMainActivity" />
         <activity android:name=".FreelanceActivity" />
         <activity android:name=".InternshipActivity" />
-        <activity android:name=".ResumeActivity"/>
+        <activity android:name=".ResumeActivity" />
         <activity android:name=".JobsActivity" />
         <activity android:name=".TenderActivity" />
         <activity android:name=".KeySkillsActivity" />

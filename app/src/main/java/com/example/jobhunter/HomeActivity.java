@@ -37,7 +37,9 @@ public class HomeActivity extends AppCompatActivity {
         initUI();
 
         //applying DP Image
-        Picasso.get().load(SharedPref.getString(getApplicationContext(), "sp_image_url")).into(dpIV);
+        if(SharedPref.getString(getApplicationContext(), "sp_image_url")!=null){
+            Picasso.get().load(SharedPref.getString(getApplicationContext(), "sp_image_url")).into(dpIV);
+        }
         usernameTV.setText(SharedPref.getString(getApplicationContext(), "sp_username"));
         useremailTV.setText(SharedPref.getString(getApplicationContext(), "sp_email"));
 
