@@ -12,11 +12,9 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/thin_block"
-        android:paddingLeft="40dp"
-        android:paddingTop="20dp"
-        android:paddingBottom="20dp"
         android:text="Resume"
         android:textColor="@color/black"
         android:textSize="35dp" />
@@ -35,7 +33,7 @@
                 android:id="@+id/nameET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Name"
@@ -53,11 +51,12 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
                 android:background="@color/dirtyyellow" />
+
             <EditText
                 android:id="@+id/domainET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Domain"
@@ -80,7 +79,7 @@
                 android:id="@+id/addressET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Address"
@@ -103,7 +102,7 @@
                 android:id="@+id/emailET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Email ID"
@@ -125,10 +124,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/thin_block"
-                android:paddingLeft="40dp"
-                android:paddingBottom="20dp"
                 android:text="Expertise"
                 android:textColor="@color/black"
                 android:textSize="35dp" />
@@ -137,7 +135,7 @@
                 android:id="@+id/expertise1ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -160,7 +158,7 @@
                 android:id="@+id/expertise2ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -183,7 +181,7 @@
                 android:id="@+id/expertise3ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -206,7 +204,7 @@
                 android:id="@+id/expertise4ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:inputType="text"
@@ -227,9 +225,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/thin_block"
-                android:paddingLeft="40dp"
+                android:paddingLeft="30dp"
                 android:paddingBottom="20dp"
                 android:text="Experience"
                 android:textColor="@color/black"
@@ -239,7 +237,7 @@
                 android:id="@+id/expcompanyET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Company Name"
@@ -262,7 +260,7 @@
                 android:id="@+id/explocationET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Company Location"
@@ -285,7 +283,7 @@
                 android:id="@+id/expjobtitleET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Job Title"
@@ -303,12 +301,13 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="30dp"
                 android:background="@color/dirtyyellow" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/thin_block"
-                android:paddingLeft="40dp"
+                android:paddingLeft="30dp"
                 android:paddingBottom="20dp"
                 android:text="What's Your Experience?"
                 android:textColor="@color/black"
@@ -318,7 +317,7 @@
                 android:id="@+id/exp1ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -342,7 +341,7 @@
                 android:id="@+id/exp2ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -364,9 +363,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/thin_block"
-                android:paddingLeft="40dp"
+                android:paddingLeft="30dp"
                 android:paddingBottom="20dp"
                 android:text="Education"
                 android:textColor="@color/black"
@@ -376,7 +375,7 @@
                 android:id="@+id/clgET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your College Name"
@@ -399,7 +398,7 @@
                 android:id="@+id/clglocationET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your College Location"
@@ -422,7 +421,7 @@
                 android:id="@+id/degreeET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Degree"
@@ -445,7 +444,7 @@
                 android:id="@+id/degdurationET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter the Duration"
@@ -469,7 +468,7 @@
                 android:id="@+id/clgpercentET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Percentage"
@@ -492,7 +491,7 @@
                 android:id="@+id/clgachievementET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Achievements"
@@ -516,7 +515,7 @@
                 android:id="@+id/schoolnameET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your School Name"
@@ -539,7 +538,7 @@
                 android:id="@+id/schoollocET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your School Location"
@@ -562,7 +561,7 @@
                 android:id="@+id/qualET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Qualification"
@@ -582,12 +581,11 @@
                 android:background="@color/dirtyyellow" />
 
 
-
             <EditText
                 android:id="@+id/schooldurET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter the Duration"
@@ -610,7 +608,7 @@
                 android:id="@+id/schoolpercentET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter Your Percentage"
@@ -633,7 +631,7 @@
                 android:id="@+id/schoolachievementET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
                 android:hint="Enter your Achievements"
@@ -655,9 +653,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/thin_block"
-                android:paddingLeft="40dp"
+                android:paddingLeft="30dp"
                 android:paddingBottom="20dp"
                 android:text="Achievements"
                 android:textColor="@color/black"
@@ -667,7 +665,7 @@
                 android:id="@+id/achievement1ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -690,7 +688,7 @@
                 android:id="@+id/achievement2ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
+
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -713,7 +711,6 @@
                 android:id="@+id/achievement3ET"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="18dp"
                 android:background="@drawable/button_blue"
                 android:fontFamily="@font/crimson"
 
@@ -739,11 +736,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="300dp"
                 android:background="@drawable/button_pink_round"
                 android:fontFamily="@font/crimson"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:layout_marginBottom="250dp"
                 android:text="Submit"
                 android:textColor="@color/white"
                 android:textSize="15dp" />
